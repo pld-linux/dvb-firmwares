@@ -1,0 +1,243 @@
+
+			LinuxTV 	
+	
+  Firmware Contents
+
+1. OREN demodulators
+2. various USB devices
+3. Conexant devices
+4. Xceive devices
+5. Dibcom driver for dib0700
+6. AV7110
+7. Terratec devices
+Tarball with all firmwares
+Changes
+
+
+  1. OREN demodulators
+
+dvb-fe-or51132-qam.fw 	
+dvb-fe-or51132-vsb.fw 	
+dvb-fe-or51211.fw 	
+
+
+  2. various USB devices
+
+dvb-usb-vp7045-01.fw 	Twinhan USB-T VP-7045/VP-7046 (MagicBoxII)
+dvb-usb-vp702x-01.fw 	TwinhanDTV StarBox
+dvb-usb-avertv-a800-02.fw 	AVerMedia
+dvb-usb-dibusb-5.0.0.11.fw 	various DiBcom USB1.1
+dvb-usb-dibusb-6.0.0.8.fw 	DiBcom/Artec USB2.0
+dvb-usb-umt-010-02.fw 	HanfTek UMT-010 USB2.0
+dvb-usb-wt220u-01.fw 	WideViewer WT-220U PenType DVB-T Receiver
+dvb-usb-dtt200u-01.fw 	Yakumo/Typhoon/Hama USB2.0
+
+
+  3. Conexant devices
+
+v4l-cx231xx-avcore-01.fw 	Conexant cx231xx USB
+v4l-cx23418-apu.fw 	Conexant cx18 APU firmware
+v4l-cx23418-cpu.fw 	Conexant cx18 CPU firmware
+v4l-cx23418-dig.fw 	Conexant cx18 DIG firmware
+v4l-cx23885-enc.fw 	Conexant cx23885 firmware
+v4l-cx23885-avcore-01.fw 	Conexant cx23885 firmware for cx2584x
+v4l-cx25840.fw 	Conexant firmware for cx2584x
+
+For all the Conexant firmwares, it applies the following license:
+
+  Conexant grants permission to use and redistribute these firmware
+  files for use with Conexant devices, but not as a part of the Linux
+  kernel or in any other form which would require these files themselves
+  to be covered by the terms of the GNU General Public License.
+  These firmware files are distributed in the hope that they will be
+  useful, but WITHOUT ANY WARRANTY; without even the implied warranty
+  of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+
+  4. Xceive devices
+
+dvb-fe-xc5000-1.6.114.fw 	Xceive xc5000 tuner
+
+Copyright (c) 2009, Xceive Corporation <info@xceive.com>
+
+Permission to use, copy, modify, and/or distribute this software, only
+for use with Xceive ICs, for any purpose with or without fee is hereby
+granted, provided that the above copyright notice and this permission
+notice appear in all source code copies.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+
+  5. Dibcom driver for dib0700
+
+dvb-usb-dib0700-1.20.fw 	dib0700 drivers
+
+Copyright (c) 2009, DiBcom
+
+Permission to use, copy, modify, and/or distribute this software for
+any purpose with or without fee is hereby granted, provided that the
+above copyright notice and this permission notice appear in all
+copies.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL
+WARRANTIES WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE
+AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL
+DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR
+PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER
+TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+PERFORMANCE OF THIS SOFTWARE.
+
+
+  6. AV7110
+
+dvb-ttpci-01.fw-261a 	Firmware 01.261a
+dvb-ttpci-01.fw-261b 	Firmware 01.261b
+dvb-ttpci-01.fw-261c 	Firmware 01.261c
+dvb-ttpci-01.fw-261d 	Firmware 01.261d
+dvb-ttpci-01.fw-261f 	Firmware 01.261f
+dvb-ttpci-01.fw-2622 	Firmware 01.2622
+
+The files are named dvb-ttpci-VV.fw-vvvv
+
+  VV : Version of firmware-to-host API. You can simply upgrade
+       the firmware binary with a newer one of the same API
+       version without changing anything else in the driver.
+  vvvv: Firmware version. Increased with each functional change.
+
+It is recommended that you use the newest firmware binary
+compatible with your driver. If you use the hotplug firmware loader
+in Linux 2.6 you must put the firmware file in
+/lib/firmware/dvb-ttpci-01.fw (in previous versions of the Linux
+hotplug scripts it was /usr/lib/hotplug/firmware/dvb-ttpci-01.fw).
+
+Boot.S is the source for the boot loader which is included
+as a binary blob in the bootcode array in av7110_hw.c in
+the Linux driver source. For more information check the
+driver tarball at http://www.metzlerbros.org/dvb/.
+
+
+  7. Terratec devices
+
+dvb-usb-terratec-h5-drxk.fw 	Terratec H5
+dvb-usb-terratec-h7-drxk.fw 	Terratec H7 DRX-K
+dvb-usb-terratec-h7-az6007.fw 	Terratec H7 az6007
+
+TERRATEC grants permission to use and redistribute these firmware
+files for use with TERRATEC devices, but not as part of the Linux
+kernel or in any other form which would require these files themselves
+to be covered by the terms of the GNU General Public License.
+
+These firmware files are distributed in the hope that they will be
+useful, but WITHOUT ANY WARRANTY; without even the implied warranty
+of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+
+  Tarball with all above firmwares
+
+A tarball with all the above firmwares is available at:
+
+dvb-firmwares.tar.bz2	Latest version (identical to Aug, 02 2011 version)
+dvb-firmwares-20110802.tar.bz2	version from Aug, 02 2011
+
+
+  Changes:
+
+2011-08-02 dvb-usb-terratec-h7-drxk.fw dvb-usb-terratec-h7-az6007.fw
+	Changes by Mauro Carvalho Chehab:
+	- Added firmware files For Terratec H5, Thanks to Terratec
+	  for getting us permission for usage.
+
+2011-07-11 dvb-usb-terratec-h5-drxk.fw
+	Changes by Mauro Carvalho Chehab:
+	- Added firmware file For Terratec H5 DRX-K, Thanks to Terratec
+	  for getting us permission for usage.
+
+2009-07-01 dvb-fe-xc5000-1.6.114.fw
+	Changes by Mauro Carvalho Chehab:
+	- Added firmware files for xc5000, thanks to Devin Heitmueller for
+	  getting manufacturer's permission
+
+2009-03-23 v4l-cx23418-apu.fw v4l-cx23418-cpu.fw v4l-cx23418-dig.fw v4l-cx23885-enc.fw v4l-cx23885-avcore-01.fw v4l-cx25840.fw
+	Changes by Mauro Carvalho Chehab:
+	- Added firmware files for several Conexant devices
+	- Added the permission for Conexant firmwares
+
+2009-03-19 v4l-cx231xx-avcore-01.fw
+	Changes by Mauro Carvalho Chehab:
+	- Added firmware file for cx231xx USB devices
+
+2005-11-23 dvb-ttpci-01.fw-2622
+	Changes by Werner Fink:
+	 - AC3 output for live channels
+	 - audio and PES filter error handling fixes
+	 - tons of changes for better/faster A/V sync and PCR handling
+	 - Initial implementation for ES/RAW audio support
+	Changes by Oliver Endriss:
+	  - support for extended RC5 (aka RC5+) infrared protocol
+	  - fixed DPRAM timing to get rid of strange pseudo-handshake
+
+2005-07-06 dvb-ttpci-01.fw-261f
+	Changes by Werner Fink:
+	  Restart error IRQ handler in case of an overflow as
+	  described in the API manual.
+	  Better auto detection of PES formats with AC3 and DTS frames not
+	  starting with the payload of PES frames with PTS value.
+
+	  Allow non aligned PES frames which include a substream ID for
+	  PCM/AC3/DTS.
+
+	  Use silent PCM for delay the PCM/AC3/DTS data to be able to
+	  compensate the PTS offset of Audio and Video PES frames.  Mainly
+	  done to be able to synchronize even within VDR transfer mode
+	  where AV data are received just in time from the TV channel.
+
+	  Calculate  the byte rate of Mpeg Audio date to be able to
+	  synchronize without an hard offset.  This avoid jumps within
+	  picture sequence due high PTS offsets at synching time. Also use
+	  the sync API for Mpeg Audio at startup.
+
+	  Add PTS reset after a PCM Bypass to be able to recover fast
+	  enough and shorten the time used in the blank timer for
+	  recovering.
+
+	  Be sure that the Bits in the message status register are done
+	  well.  Add two new bits which indicates play mode and stop spare
+	  time.
+
+	  Make ReleaseBmp work even during running Bitmap upload.  Be sure
+	  that normal OSD command sequences will not destroxed by a normal
+	  ReleaseBmp.  Be sure that the ACK to the PC work even if the
+	  Bitmap upload is premature aborted.
+
+	  Add a workaround to be sure that TX_BUFF is really reset by the
+	  PC and does not provide the old value.  It seems that modifying
+	  of IRQ_RX by the PC is not always in sync.
+
+2005-xx-xx dvb-ttpci-01.fw-261e
+	   (not officially released)
+
+2004-12-26 dvb-ttpci-01.fw-261d
+	Changes by Werner Fink:
+	- Implement AC3/DTS replay capability
+	- Proper handling of OSD bitmap loading with timeouts
+	- Set interpolated option of video decoder to reduce block
+	  noise on hard picture changes
+	- FlushTS command fixes
+
+2004-06-10 dvb-ttpci-01.fw-261c
+	- now using additional 2MB SDRAM for OSD if present
+	  (support for VDR-oriented hardware patch)
+	- remove boot splash
+
+2003-10-13 dvb-ttpci-01.fw-261b
+	fixed distortions when switching channel while recording
+
+2003-07-09 dvb-ttpci-01.fw-261a
+
